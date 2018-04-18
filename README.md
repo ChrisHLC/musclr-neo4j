@@ -21,10 +21,6 @@
 {
     "links": [
         {
-            "source": 544,
-            "target": 545
-        },
-        {
             "source": 562,
             "target": 563
         }
