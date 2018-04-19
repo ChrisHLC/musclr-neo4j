@@ -2,8 +2,6 @@ package com.musclr.services;
 
 import com.musclr.domain.User;
 import com.musclr.repositories.UserRepository;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -13,8 +11,6 @@ import java.util.*;
 @Service
 public class UserService {
 
-	private final static Logger LOGGER = LoggerFactory.getLogger(UserService.class);
-
 	private final UserRepository userRepository;
 
 	public UserService(UserRepository userRepository) {
@@ -22,7 +18,7 @@ public class UserService {
 	}
 
 	@Transactional(readOnly = true)
-	public Map<String, Object>  graph(int limit) {
+	public Map<String, Object> graph(int limit) {
 		Collection<User> result = userRepository.graph(limit);
 		return toD3Format(result);
 	}
@@ -45,7 +41,7 @@ public class UserService {
 	}
 
 	private Map<String, Object> map(String key1, Object value1, String key2, Object value2) {
-		Map<String, Object> result = new HashMap<String, Object>(2);
+		Map<String, Object> result = new HashMap<>(2);
 		result.put(key1, value1);
 		result.put(key2, value2);
 		return result;

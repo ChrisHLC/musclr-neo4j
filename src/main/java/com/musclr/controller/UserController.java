@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/")
+@RequestMapping("/users")
 public class UserController {
 
 	private final UserService userService;
@@ -18,7 +18,7 @@ public class UserController {
 		this.userService = userService;
 	}
 
-	@GetMapping("/users")
+	@GetMapping("/")
 	public Map<String, Object> graph(@RequestParam(value = "limit",required = false) Integer limit) {
 		return userService.graph(limit == null ? 100 : limit);
 	}
