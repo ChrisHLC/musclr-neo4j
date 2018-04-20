@@ -16,7 +16,5 @@ public class CorsConfiguration {
 				registry.addMapping("/**");
 			}
 		};
-
-
 	}
 }

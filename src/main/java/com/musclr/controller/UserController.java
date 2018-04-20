@@ -18,7 +18,7 @@ public class UserController {
 		this.userService = userService;
 	}
 
-	@GetMapping("/")
+	@GetMapping("")
 	public Map<String, Object> graph(@RequestParam(value = "limit",required = false) Integer limit) {
 		return userService.graph(limit == null ? 100 : limit);
 	}

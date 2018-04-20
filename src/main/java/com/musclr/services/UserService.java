@@ -1,17 +1,24 @@
 package com.musclr.services;
 
-import com.musclr.domain.User;
+import com.musclr.domain.links.Coach;
+import com.musclr.domain.links.Friend;
+import com.musclr.domain.nodes.User;
 import com.musclr.repositories.UserRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.*;
 
+import static com.musclr.domain.KeysName.*;
+
 
 @Service
 public class UserService {
 
 	private final UserRepository userRepository;
+	private final List<String> elementKeyList = Arrays.asList(NODES, LINKS);
+	private final List<String> nodeKeyList = Arrays.asList(ID, USERNAME, ROLE, LEVEL);
+	private final List<String> linkKeyList = Arrays.asList(SOURCE, TARGET, LABEL);
 
 	public UserService(UserRepository userRepository) {
 		this.userRepository = userRepository;
@@ -27,23 +34,28 @@ public class UserService {
 		List<Map<String, Object>> nodes = new ArrayList<>();
 		List<Map<String, Object>> links = new ArrayList<>();
 		Iterator<User> result = users.iterator();
-		while (result.hasNext()) {
-			User user = result.next();
-			nodes.add(map("id", user.getId(), "label", user.getUsername()));
+		result.forEachRemaining(user -> {
+			nodes.add(map(nodeKeyList, Arrays.asList(user.getId(), user.getUsername(), user.getRole(), user.getLevel())));
 			Long source = user.getId();
 
-			for (User friend : user.getFriends()) {
-				Long target = friend.getId();
-				links.add(map("source", source, "target", target));
+			for (Friend friend : user.getFriends()) {
+				Long target = friend.getTarget().getId();
+				links.add(map(linkKeyList, Arrays.asList(source, target, "Friend")));
 			}
-		}
-		return map("nodes", nodes, "links", links);
+
+			for (Coach coach : user.getCoaches()) {
+				Long target = coach.getTarget().getId();
+				links.add(map(linkKeyList, Arrays.asList(source, target, "Coach")));
+			}
+		});
+		return map(elementKeyList, Arrays.asList(nodes, links));
 	}
 
-	private Map<String, Object> map(String key1, Object value1, String key2, Object value2) {
-		Map<String, Object> result = new HashMap<>(2);
-		result.put(key1, value1);
-		result.put(key2, value2);
+	private Map<String, Object> map(List<String> key, List<Object> value) {
+		Map<String, Object> result = new HashMap<>();
+		for (int i = 0; i < key.size(); i++) {
+			result.put(key.get(i), value.get(i));
+		}
 		return result;
 	}
 }
