@@ -1,15 +1,15 @@
 package com.musclr.repositories;
 
-import com.musclr.domain.nodes.User;
+import com.musclr.domain.nodes.Event;
 import org.springframework.data.neo4j.annotation.Query;
 import org.springframework.data.neo4j.repository.Neo4jRepository;
 import org.springframework.data.repository.query.Param;
 
 import java.util.Collection;
 
-public interface UserRepository extends Neo4jRepository<User, Long> {
+public interface EventRepository extends Neo4jRepository<Event, Long> {
 
-	@Query("MATCH (f:User)-[r:FRIEND|COACH]-(u:User) RETURN f,r,u LIMIT {limit}")
-	Collection<User> getUsers(@Param("limit") int limit);
+	@Query("MATCH (e:Event)-[r:PARTICIPATE]-(u:User) RETURN e,r,u LIMIT {limit}")
+	Collection<Event> getEvents(@Param("limit") int limit);
 
 }

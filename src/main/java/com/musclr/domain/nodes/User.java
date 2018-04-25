@@ -2,6 +2,7 @@ package com.musclr.domain.nodes;
 
 import com.musclr.domain.links.Friend;
 import com.musclr.domain.links.Coach;
+import com.musclr.domain.links.Participate;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -24,6 +25,7 @@ public class User {
 	@Id
 	@GeneratedValue
 	private Long id;
+	private String group;
 	private String email;
 	private String username;
 	private String role;
@@ -34,4 +36,7 @@ public class User {
 
 	@Relationship(type = "COACH")
 	private List<Coach> coaches = new ArrayList<>();
+
+	@Relationship(type = "PARTICIPATE")
+	private List<Participate> participates = new ArrayList<>();
 }

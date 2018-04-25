@@ -13,52 +13,46 @@ import static com.musclr.domain.GroupName.USER;
 import static com.musclr.domain.KeysName.*;
 import static com.musclr.domain.RelationName.COACH;
 import static com.musclr.domain.RelationName.FRIEND;
+import static com.musclr.services.util.Neo4jToD3.map;
 
 
 @Service
 public class UserService {
 
-    private final UserRepository userRepository;
-    private final List<String> elementKeyList = Arrays.asList(NODES, LINKS);
-    private final List<String> nodeKeyList = Arrays.asList(ID, USERNAME, ROLE, LEVEL, GROUP);
-    private final List<String> linkKeyList = Arrays.asList(SOURCE, TARGET, LABEL, SOURCE_GROUP, TARGET_GROUP);
+	private final UserRepository userRepository;
+	private final List<String> elementKeyList = Arrays.asList(NODES, LINKS);
+	private final List<String> nodeKeyList = Arrays.asList(ID, USERNAME, ROLE, LEVEL, GROUP);
+	private final List<String> linkKeyList = Arrays.asList(SOURCE, TARGET, LABEL, SOURCE_GROUP, TARGET_GROUP);
 
-    public UserService(UserRepository userRepository) {
-        this.userRepository = userRepository;
-    }
+	public UserService(UserRepository userRepository) {
+		this.userRepository = userRepository;
+	}
 
-    @Transactional(readOnly = true)
-    public Map<String, Object> graph(int limit) {
-        Collection<User> result = userRepository.graph(limit);
-        return toD3Format(result);
-    }
+	@Transactional(readOnly = true)
+	public Map<String, Object> getUsers(int limit) {
+		Collection<User> result = userRepository.getUsers(limit);
+		return toD3Format(result);
+	}
 
-    private Map<String, Object> toD3Format(Collection<User> users) {
-        List<Map<String, Object>> nodes = new ArrayList<>();
-        List<Map<String, Object>> links = new ArrayList<>();
-        Iterator<User> result = users.iterator();
-        result.forEachRemaining(user -> {
-            nodes.add(map(nodeKeyList, Arrays.asList(user.getId(), user.getUsername(), user.getRole(), user.getLevel(), USER)));
-            Long source = user.getId();
+	private Map<String, Object> toD3Format(Collection<User> users) {
+		List<Map<String, Object>> nodes = new ArrayList<>();
+		List<Map<String, Object>> links = new ArrayList<>();
+		Iterator<User> result = users.iterator();
+		result.forEachRemaining(user -> {
+			nodes.add(map(nodeKeyList, Arrays.asList(user.getId(), user.getUsername(), user.getRole(), user.getLevel(), USER)));
+			Long source = user.getId();
 
-            for (Friend friend : user.getFriends()) {
-                Long target = friend.getTarget().getId();
-                links.add(map(linkKeyList, Arrays.asList(source, target, FRIEND, USER, USER)));
-            }
+			for (Friend friend : user.getFriends()) {
+				Long target = friend.getTarget().getId();
+				links.add(map(linkKeyList, Arrays.asList(source, target, FRIEND, USER, USER)));
+			}
 
-            for (Coach coach : user.getCoaches()) {
-                Long target = coach.getTarget().getId();
-                links.add(map(linkKeyList, Arrays.asList(source, target, COACH, USER, USER)));
-            }
-        });
-        return map(elementKeyList, Arrays.asList(nodes, links));
-    }
+			for (Coach coach : user.getCoaches()) {
+				Long target = coach.getTarget().getId();
+				links.add(map(linkKeyList, Arrays.asList(source, target, COACH, USER, USER)));
+			}
+		});
+		return map(elementKeyList, Arrays.asList(nodes, links));
+	}
 
-    private Map<String, Object> map(List<String> key, List<Object> value) {
-        Map<String, Object> result = new HashMap<>();
-        for (int i = 0; i < key.size(); i++) {
-            result.put(key.get(i), value.get(i));
-        }
-        return result;
-    }
 }

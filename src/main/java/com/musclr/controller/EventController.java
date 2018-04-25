@@ -1,6 +1,6 @@
 package com.musclr.controller;
 
-import com.musclr.services.UserService;
+import com.musclr.services.EventService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -9,17 +9,17 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/users")
-public class UserController {
+@RequestMapping("/events")
+public class EventController {
 
-	private final UserService userService;
+	private final EventService eventService;
 
-	public UserController(UserService userService) {
-		this.userService = userService;
+	public EventController(EventService eventService) {
+		this.eventService = eventService;
 	}
 
 	@GetMapping("")
 	public Map<String, Object> getUsers(@RequestParam(value = "limit",required = false) Integer limit) {
-		return userService.getUsers(limit == null ? 100 : limit);
+		return eventService.getEvents(limit == null ? 100 : limit);
 	}
 }
