@@ -1,5 +1,6 @@
 package com.musclr.domain.links;
 
+import com.musclr.domain.nodes.Gym;
 import com.musclr.domain.nodes.User;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -11,8 +12,8 @@ import org.neo4j.ogm.annotation.*;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@RelationshipEntity(type = "FRIEND")
-public class Friend {
+@RelationshipEntity(type = "TRAIN")
+public class Train {
 
     @Id
     @GeneratedValue
@@ -22,5 +23,5 @@ public class Friend {
     private User source;
 
     @EndNode
-    private User target;
+    private Gym target;
 }

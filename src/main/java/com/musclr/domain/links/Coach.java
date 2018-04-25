@@ -15,13 +15,13 @@ import org.neo4j.ogm.annotation.*;
 @RelationshipEntity(type = "COACH")
 public class Coach {
 
-	@Id
-	@GeneratedValue
-	private Long id;
+    @Id
+    @GeneratedValue
+    private Long id;
 
-	@StartNode
-	private User source;
+    @StartNode
+    private User source;
 
-	@EndNode
-	private User target;
+    @EndNode
+    private User target;
 }

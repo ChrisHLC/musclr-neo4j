@@ -1,8 +1,6 @@
 package com.musclr.domain.nodes;
 
-import com.musclr.domain.links.Friend;
-import com.musclr.domain.links.Coach;
-import com.musclr.domain.links.Participate;
+import com.musclr.domain.links.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -22,21 +20,27 @@ import java.util.List;
 @NodeEntity
 public class User {
 
-	@Id
-	@GeneratedValue
-	private Long id;
-	private String group;
-	private String email;
-	private String username;
-	private String role;
-	private String level;
+    @Id
+    @GeneratedValue
+    private Long id;
+    private String group;
+    private String email;
+    private String username;
+    private String role;
+    private String level;
 
-	@Relationship(type = "FRIEND")
-	private List<Friend> friends = new ArrayList<>();
+    @Relationship(type = "FRIEND", direction = Relationship.UNDIRECTED)
+    private List<Friend> friends = new ArrayList<>();
 
-	@Relationship(type = "COACH")
-	private List<Coach> coaches = new ArrayList<>();
+    @Relationship(type = "COACH", direction = Relationship.UNDIRECTED)
+    private List<Coach> coaches = new ArrayList<>();
 
-	@Relationship(type = "PARTICIPATE")
-	private List<Participate> participates = new ArrayList<>();
+    @Relationship(type = "PARTICIPATE")
+    private List<Participate> participates = new ArrayList<>();
+
+    @Relationship(type = "LIVE")
+    private UserLocation userLocation;
+
+    @Relationship(type = "TRAIN")
+    private List<Train> trains = new ArrayList<>();
 }

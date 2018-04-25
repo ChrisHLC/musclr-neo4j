@@ -15,13 +15,13 @@ import org.neo4j.ogm.annotation.*;
 @RelationshipEntity(type = "PARTICIPATE")
 public class Participate {
 
-	@Id
-	@GeneratedValue
-	private Long id;
+    @Id
+    @GeneratedValue
+    private Long id;
 
-	@StartNode
-	private User source;
+    @StartNode
+    private User source;
 
-	@EndNode
-	private Event target;
+    @EndNode
+    private Event target;
 }

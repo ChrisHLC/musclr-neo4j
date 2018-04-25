@@ -1,8 +1,7 @@
 package com.musclr.domain.nodes;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.musclr.domain.links.EventLocation;
-import com.musclr.domain.links.Participate;
+import com.musclr.domain.links.GymLocation;
 import com.musclr.domain.links.Situated;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -21,22 +20,21 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @NodeEntity
-public class Event {
+public class Gym {
 
     @Id
     @GeneratedValue
     private Long id;
     private String group;
-    private String workout;
+    private String label;
 
-    @Relationship(type = "SITUATED")
-    private Situated situated;
+    @Relationship(type = "GYM_LOCATION")
+    private GymLocation gymLocation;
 
-    @Relationship(type = "EVENT_LOCATION")
-    private EventLocation eventLocation;
+    @Relationship(type = "TRAIN", direction = Relationship.INCOMING)
+    private List<User> users = new ArrayList<>();
 
-    @Relationship(type = "PARTICIPATE", direction = Relationship.INCOMING)
-    private List<Participate> participates = new ArrayList<>();
-
+    @Relationship(type = "SITUATED", direction = Relationship.INCOMING)
+    private List<Situated> situateds = new ArrayList<>();
 
 }
