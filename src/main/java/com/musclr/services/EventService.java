@@ -7,7 +7,10 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.*;
 
+import static com.musclr.domain.GroupName.EVENT;
+import static com.musclr.domain.GroupName.USER;
 import static com.musclr.domain.KeysName.*;
+import static com.musclr.domain.RelationName.PARTICIPATE;
 import static com.musclr.services.util.Neo4jToD3.elementKeyList;
 import static com.musclr.services.util.Neo4jToD3.map;
 
@@ -15,7 +18,8 @@ import static com.musclr.services.util.Neo4jToD3.map;
 public class EventService {
 
 	private final EventRepository eventRepository;
-	private final List<String> nodeKeyList = Arrays.asList(ID, WORKOUT);
+	private final List<String> nodeKeyList = Arrays.asList(ID, WORKOUT, GROUP);
+	private final List<String> linkKeyList = Arrays.asList(SOURCE, TARGET, LABEL, SOURCE_GROUP, TARGET_GROUP);
 
 	public EventService(EventRepository eventRepository) {
 		this.eventRepository = eventRepository;
@@ -31,9 +35,14 @@ public class EventService {
 	private Map<String, Object> toD3Format(Collection<Event> events) {
 		List<Map<String, Object>> nodes = new ArrayList<>();
 		List<Map<String, Object>> links = new ArrayList<>();
-		Iterator<Event> result = events.iterator();
-		result.forEachRemaining(event -> {
-			nodes.add(map(nodeKeyList, Arrays.asList(event.getId(), event.getWorkout())));
+		events.forEach(event -> {
+			nodes.add(map(nodeKeyList, Arrays.asList(event.getId(), event.getWorkout(), EVENT)));
+			Long target = event.getId();
+
+			event.getParticipates().forEach(participant -> {
+				Long source = participant.getSource().getId();
+				links.add(map(linkKeyList, Arrays.asList(source, target, PARTICIPATE, USER, EVENT)));
+			});
 		});
 		return map(elementKeyList, Arrays.asList(nodes, links));
 	}

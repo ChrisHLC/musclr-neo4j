@@ -1,5 +1,6 @@
 package com.musclr.domain.links;
 
+import com.musclr.domain.nodes.Event;
 import com.musclr.domain.nodes.User;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -22,5 +23,5 @@ public class Participate {
 	private User source;
 
 	@EndNode
-	private User target;
+	private Event target;
 }

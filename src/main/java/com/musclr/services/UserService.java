@@ -37,8 +37,7 @@ public class UserService {
 	private Map<String, Object> toD3Format(Collection<User> users) {
 		List<Map<String, Object>> nodes = new ArrayList<>();
 		List<Map<String, Object>> links = new ArrayList<>();
-		Iterator<User> result = users.iterator();
-		result.forEachRemaining(user -> {
+		users.forEach(user -> {
 			nodes.add(map(nodeKeyList, Arrays.asList(user.getId(), user.getUsername(), user.getRole(), user.getLevel(), USER)));
 			Long source = user.getId();
 
