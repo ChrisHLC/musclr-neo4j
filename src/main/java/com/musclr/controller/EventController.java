@@ -19,7 +19,9 @@ public class EventController {
 	}
 
 	@GetMapping("")
-	public Map<String, Object> getUsers(@RequestParam(value = "limit",required = false) Integer limit) {
-		return eventService.getEvents(limit == null ? 100 : limit);
+	public Map<String, Object> getEvents(@RequestParam(value = "users", required = false) Boolean users,
+	                                     @RequestParam(value = "gyms", required = false) Boolean gyms,
+	                                     @RequestParam(value = "towns", required = false) Boolean towns) {
+		return eventService.getEvents(users == null ? false : users, gyms == null ? false : gyms, towns == null ? false : towns);
 	}
 }

@@ -2,6 +2,8 @@ package com.musclr.services;
 
 import com.musclr.domain.links.Coach;
 import com.musclr.domain.links.Friend;
+import com.musclr.domain.links.Link;
+import com.musclr.domain.nodes.Event;
 import com.musclr.domain.nodes.User;
 import com.musclr.repositories.UserRepository;
 import org.springframework.stereotype.Service;
@@ -13,8 +15,8 @@ import static com.musclr.domain.GroupName.USER;
 import static com.musclr.domain.KeysName.*;
 import static com.musclr.domain.RelationName.COACH;
 import static com.musclr.domain.RelationName.FRIEND;
+import static com.musclr.services.util.Neo4jToD3.elementKeyList;
 import static com.musclr.services.util.Neo4jToD3.map;
-
 
 @Service
 public class UserService {
@@ -54,4 +56,26 @@ public class UserService {
 		return map(elementKeyList, Arrays.asList(nodes, links));
 	}
 
+	public Map<String,Object> getUsers(boolean events, boolean gyms, boolean towns) {
+		Collection<Event> nodes = userRepository.getUsers();
+		Collection<Link> links = new ArrayList<>();
+		List<Map<String, Object>> nodesJson = new ArrayList<>();
+		List<Map<String, Object>> linksJson = new ArrayList<>();
+
+		if (events) {
+			links.addAll(userRepository.get());
+		}
+		if (gyms) {
+			links.addAll(userRepository.getSituated());
+		}
+		if (towns) {
+			links.addAll(userRepository.getEventLocation());
+		}
+
+		nodes.forEach(node -> nodesJson.add(map(nodeKeyList, Arrays.asList(node.getId(), node.getLabel(), node.getGroup()))));
+		links.forEach(link -> linksJson.add(map(linkKeyList, Arrays.asList(link.getSource().getId(), link.getTarget().getId(), link.getLabel()))));
+
+		return map(elementKeyList, Arrays.asList(nodesJson, linksJson));
+		
+	}
 }

@@ -1,12 +1,12 @@
-CREATE (Keanu:User {username:'Keanu Reeves', role:'CoachR', level:'Gold'})
-CREATE (Carrie:User {username:'Carrie-Anne Moss', role:'MusclR', level:'Silver'})
-CREATE (Laurence:User {username:'Laurence Fishburne', role:'MusclR', level:'Bronze'})
-CREATE (Hugo:User {username:'Hugo Weaving', role:'MusclR', level:'Silver'})
-CREATE (LillyW:User {username:'Lilly Wachowski', role:'MusclR', level:'Gold'})
-CREATE (LanaW:User {username:'Lana Wachowski', role:'MusclR', level:'Silver'})
-CREATE (JoelS:User {username:'Joel Silver', role:'MusclR', level:'Bronze'})
-CREATE (jambe:Event {workout:'jambe'})
-CREATE (biceps:Event {workout:'biceps'})
+CREATE (Keanu:User {label:'Keanu Reeves', role:'CoachR', level:'Gold'})
+CREATE (Carrie:User {label:'Carrie-Anne Moss', role:'MusclR', level:'Silver'})
+CREATE (Laurence:User {label:'Laurence Fishburne', role:'MusclR', level:'Bronze'})
+CREATE (Hugo:User {label:'Hugo Weaving', role:'MusclR', level:'Silver'})
+CREATE (LillyW:User {label:'Lilly Wachowski', role:'MusclR', level:'Gold'})
+CREATE (LanaW:User {label:'Lana Wachowski', role:'MusclR', level:'Silver'})
+CREATE (JoelS:User {label:'Joel Silver', role:'MusclR', level:'Bronze'})
+CREATE (jambe:Event {label:'jambe'})
+CREATE (biceps:Event {label:'biceps'})
 CREATE
   (Keanu)-[:COACH]->(Carrie),
   (Keanu)-[:FRIEND]->(Laurence),

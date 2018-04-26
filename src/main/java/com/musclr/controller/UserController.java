@@ -19,7 +19,9 @@ public class UserController {
 	}
 
 	@GetMapping("")
-	public Map<String, Object> getUsers(@RequestParam(value = "limit",required = false) Integer limit) {
-		return userService.getUsers(limit == null ? 100 : limit);
+	public Map<String, Object> getUsers(@RequestParam(value = "events", required = false) Boolean events,
+	                                    @RequestParam(value = "gyms", required = false) Boolean gyms,
+	                                    @RequestParam(value = "towns", required = false) Boolean towns) {
+		return userService.getUsers(events == null ? false : events, gyms == null ? false : gyms, towns == null ? false : towns);
 	}
 }

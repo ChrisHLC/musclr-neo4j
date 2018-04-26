@@ -5,23 +5,14 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.neo4j.ogm.annotation.*;
-
+import org.neo4j.ogm.annotation.RelationshipEntity;
 
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @RelationshipEntity(type = "COACH")
-public class Coach {
+public class Coach extends Link<User, User> {
 
-    @Id
-    @GeneratedValue
-    private Long id;
-
-    @StartNode
-    private User source;
-
-    @EndNode
-    private User target;
+	private String label = "Coach";
 }
