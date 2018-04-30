@@ -5,8 +5,16 @@ CREATE (Hugo:User {label:'Hugo Weaving', role:'MusclR', level:'Silver'})
 CREATE (LillyW:User {label:'Lilly Wachowski', role:'MusclR', level:'Gold'})
 CREATE (LanaW:User {label:'Lana Wachowski', role:'MusclR', level:'Silver'})
 CREATE (JoelS:User {label:'Joel Silver', role:'MusclR', level:'Bronze'})
+
 CREATE (jambe:Event {label:'jambe'})
 CREATE (biceps:Event {label:'biceps'})
+
+CREATE (fitness:Gym {label:'Fitness Park'})
+CREATE (montana:Gym {label:'Montana'})
+
+CREATE (stdiz:Town {label:'Saint-Dizier'})
+CREATE (juvisy:Town {label:'Juvisy'})
+
 CREATE
   (Keanu)-[:COACH]->(Carrie),
   (Keanu)-[:FRIEND]->(Laurence),
@@ -20,6 +28,19 @@ CREATE
   (Hugo)-[:PARTICIPATE]->(jambe),
   (JoelS)-[:PARTICIPATE]->(biceps),
   (Keanu)-[:PARTICIPATE]->(biceps),
-  (LanaW)-[:PARTICIPATE]->(biceps);
+  (LanaW)-[:PARTICIPATE]->(biceps),
 
-  
+  (Keanu)-[:USER_LOCATION]->(juvisy),
+  (Laurence)-[:USER_LOCATION]->(stdiz),
+
+  (fitness)-[:GYM_LOCATION]->(juvisy),
+  (montana)-[:GYM_LOCATION]->(stdiz),
+
+  (biceps)-[:EVENT_LOCATION]->(juvisy),
+  (jambe)-[:EVENT_LOCATION]->(stdiz),
+
+  (Keanu)-[:TRAIN]->(fitness),
+  (Laurence)-[:TRAIN]->(montana),
+
+  (biceps)-[:SITUATED]->(fitness),
+  (jambe)-[:SITUATED]->(montana);

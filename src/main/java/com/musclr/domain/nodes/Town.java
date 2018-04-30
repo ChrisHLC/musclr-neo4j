@@ -19,12 +19,12 @@ public class Town extends Node {
 
 	private String group = "towns";
 
-	@Relationship(type = "EVENT_LOCATION", direction = Relationship.INCOMING)
-	private List<EventLocation> eventLocations = new ArrayList<>();
-
-	@Relationship(type = "GYM_LOCATION", direction = Relationship.INCOMING)
-	private List<GymLocation> gymLocations = new ArrayList<>();
-
-	@Relationship(type = "USER_LOCATION", direction = Relationship.INCOMING)
-	private List<UserLocation> userLocations = new ArrayList<>();
+//	@Relationship(type = "EVENT_LOCATION", direction = Relationship.INCOMING)
+//	private List<EventLocation> eventLocations = new ArrayList<>();
+//
+//	@Relationship(type = "GYM_LOCATION", direction = Relationship.INCOMING)
+//	private List<GymLocation> gymLocations = new ArrayList<>();
+//
+//	@Relationship(type = "USER_LOCATION", direction = Relationship.INCOMING)
+//	private List<UserLocation> userLocations = new ArrayList<>();
 }

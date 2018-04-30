@@ -14,7 +14,7 @@ import org.neo4j.ogm.annotation.StartNode;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public  class Link<S extends Node, T extends Node> {
+public class Link<S extends Node, T extends Node> {
 
 	@Id
 	@GeneratedValue
@@ -26,7 +26,7 @@ public  class Link<S extends Node, T extends Node> {
 	@EndNode
 	private T target;
 
-	public String getLabel(){
+	public String getLabel() {
 		return null;
 	}
 }

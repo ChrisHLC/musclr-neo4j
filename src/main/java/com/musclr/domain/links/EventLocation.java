@@ -15,5 +15,5 @@ import org.neo4j.ogm.annotation.RelationshipEntity;
 @RelationshipEntity(type = "EVENT_LOCATION")
 public class EventLocation extends Link<Event, Town> {
 
-	private String label = "Event";
+	private String label = "Event Location";
 }

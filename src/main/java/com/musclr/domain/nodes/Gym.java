@@ -2,6 +2,7 @@ package com.musclr.domain.nodes;
 
 import com.musclr.domain.links.GymLocation;
 import com.musclr.domain.links.Situated;
+import com.musclr.domain.links.Train;
 import lombok.*;
 import org.neo4j.ogm.annotation.Relationship;
 
@@ -17,14 +18,13 @@ public class Gym extends Node {
 
 	private String group = "gyms";
 
-
-	@Relationship(type = "GYM_LOCATION")
-	private GymLocation gymLocation;
-
-	@Relationship(type = "TRAIN", direction = Relationship.INCOMING)
-	private List<User> users = new ArrayList<>();
-
-	@Relationship(type = "SITUATED", direction = Relationship.INCOMING)
-	private List<Situated> situateds = new ArrayList<>();
+//	@Relationship(type = "GYM_LOCATION")
+//	private List<GymLocation> gymLocation;
+//
+//	@Relationship(type = "TRAIN", direction = Relationship.INCOMING)
+//	private List<Train> users = new ArrayList<>();
+//
+//	@Relationship(type = "SITUATED", direction = Relationship.INCOMING)
+//	private List<Situated> situateds = new ArrayList<>();
 
 }

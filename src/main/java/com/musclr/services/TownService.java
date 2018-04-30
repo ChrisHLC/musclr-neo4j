@@ -1,6 +1,6 @@
 package com.musclr.services;
 
-import com.musclr.repositories.EventRepository;
+import com.musclr.repositories.TownRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -13,19 +13,18 @@ import static com.musclr.domain.KeysName.*;
 import static com.musclr.services.util.Neo4jToD3.getLinkedNodes;
 
 @Service
-public class EventService {
+public class TownService {
 
-	private final EventRepository eventRepository;
+	private final TownRepository townRepository;
 	private final List<String> nodeKeyList = Arrays.asList(ID, LABEL, GROUP);
 	private final List<String> linkKeyList = Collections.singletonList(LABEL);
 
-	public EventService(EventRepository eventRepository) {
-		this.eventRepository = eventRepository;
+	public TownService(TownRepository townRepository) {
+		this.townRepository = townRepository;
 	}
 
 	@Transactional(readOnly = true)
-	public Map<String, Object> getEvents(Map<String, Boolean> booleanMap) {
-		return getLinkedNodes(eventRepository, nodeKeyList, linkKeyList, booleanMap);
+	public Map<String, Object> getTowns(Map<String, Boolean> booleanMap) {
+		return getLinkedNodes(townRepository, nodeKeyList, linkKeyList, booleanMap);
 	}
-
 }

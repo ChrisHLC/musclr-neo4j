@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.HashMap;
 import java.util.Map;
 
 @RestController
@@ -19,9 +20,13 @@ public class EventController {
 	}
 
 	@GetMapping("")
-	public Map<String, Object> getEvents(@RequestParam(value = "users", required = false) Boolean users,
-	                                     @RequestParam(value = "gyms", required = false) Boolean gyms,
-	                                     @RequestParam(value = "towns", required = false) Boolean towns) {
-		return eventService.getEvents(users == null ? false : users, gyms == null ? false : gyms, towns == null ? false : towns);
+	public Map<String, Object> getEvents(@RequestParam(value = "Users", required = false) Boolean users,
+	                                     @RequestParam(value = "Gyms", required = false) Boolean gyms,
+	                                     @RequestParam(value = "Towns", required = false) Boolean towns) {
+		Map<String, Boolean> booleanMap = new HashMap<>();
+		booleanMap.put("Users", users == null ? false : users);
+		booleanMap.put("Gyms", gyms == null ? false : gyms);
+		booleanMap.put("Towns", towns == null ? false : towns);
+		return eventService.getEvents(booleanMap);
 	}
 }

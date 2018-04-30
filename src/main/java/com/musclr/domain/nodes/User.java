@@ -1,5 +1,7 @@
 package com.musclr.domain.nodes;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.musclr.domain.links.*;
 import lombok.*;
 import org.neo4j.ogm.annotation.Relationship;
@@ -24,18 +26,19 @@ public class User extends Node {
 
 	private String level;
 
-	@Relationship(type = "FRIEND", direction = Relationship.UNDIRECTED)
-	private List<Friend> friends = new ArrayList<>();
-
-	@Relationship(type = "COACH", direction = Relationship.UNDIRECTED)
-	private List<Coach> coaches = new ArrayList<>();
-
-	@Relationship(type = "PARTICIPATE")
-	private List<Participate> participates = new ArrayList<>();
-
-	@Relationship(type = "LIVE")
-	private UserLocation userLocation;
-
-	@Relationship(type = "TRAIN")
-	private List<Train> trains = new ArrayList<>();
+//	@Relationship(type = "FRIEND", direction = Relationship.UNDIRECTED)
+//	private List<Friend> friends = new ArrayList<>();
+//
+//	@Relationship(type = "COACH", direction = Relationship.UNDIRECTED)
+//	private List<Coach> coaches = new ArrayList<>();
+//
+//	@JsonIgnoreProperties
+//	@Relationship(type = "PARTICIPATE")
+//	private List<Participate> participates = new ArrayList<>();
+//
+//	@Relationship(type = "LIVE")
+//	private List<UserLocation> userLocation;
+//
+//	@Relationship(type = "TRAIN")
+//	private List<Train> trains = new ArrayList<>();
 }
