@@ -24,14 +24,15 @@
     
 4. Create a lot of data using [GraphGen](http://graphgen.graphaware.com/#/). In "Enter your pattern here", copy/paste the following:
 
-    (person:User {label: fullName} *200)-[:FRIEND *n..n]->(person)  
-    (person)-[:COACH *1..n]->(person)  
-    (person)-[:USER_LOCATION *1..1]->(town:Town {label: city} *40)  
-    (person)-[:TRAIN *1..1]->(gym:Gym {label: company} *30)  
-    (person)-[:PARTICIPATE *n..n]->(event:Event {label: word} *50)  
-    (event)-[:EVENT_LOCATION *1..1]->(town)  
-    (event)-[:SITUATED *1..1]->(gym)  
-    (gym)-[:GYM_LOCATION *1..1]->(town)  
+   (person:User {label: fullName, level:{randomElement:[['Bronze','Silver','Gold']], role:{randomElement:[['MusclR','CoachR','Admin']] } }} *200)-[:FRIEND *n..n]->(person)  
+(person)-[:COACH *1..n]->(person)  
+(person)-[:USER_LOCATION *1..1]->(town:Town {label: city} *40)  
+(person)-[:TRAIN *1..1]->(gym:Gym {label: company} *30)  
+(person)-[:PARTICIPATE *n..n]->(event:Event {label: word} *50)  
+(event)-[:EVENT_LOCATION *1..1]->(town)  
+(event)-[:SITUATED *1..1]->(gym)  
+(gym)-[:GYM_LOCATION *1..1]->(town)  
+ 
     
 Feel free to create more/less data by modifying the number after the multiply sign
   
