@@ -20,13 +20,13 @@ public class TownController {
 	}
 
 	@GetMapping("")
-	public Map<String, Object> getTowns(@RequestParam(value = "Users", required = false) Boolean users,
-	                                    @RequestParam(value = "Events", required = false) Boolean events,
-	                                    @RequestParam(value = "Gyms", required = false) Boolean gyms) {
+	public Map<String, Object> getTowns(@RequestParam(value = "Users", required = false) String users,
+	                                    @RequestParam(value = "Events", required = false) String events,
+	                                    @RequestParam(value = "Gyms", required = false) String gyms) {
 		Map<String, Boolean> booleanMap = new HashMap<>();
-		booleanMap.put("Users", users == null ? false : users);
-		booleanMap.put("Events", events == null ? false : events);
-		booleanMap.put("Gyms", gyms == null ? false : gyms);
+		booleanMap.put("Users", Boolean.valueOf(users));
+		booleanMap.put("Events", Boolean.valueOf(events));
+		booleanMap.put("Gyms", Boolean.valueOf(gyms));
 		return townService.getTowns(booleanMap);
 	}
 }

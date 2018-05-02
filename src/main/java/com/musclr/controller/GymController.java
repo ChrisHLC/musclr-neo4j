@@ -20,13 +20,13 @@ public class GymController {
 	}
 
 	@GetMapping("")
-	public Map<String, Object> getGyms(@RequestParam(value = "Users", required = false) Boolean users,
-	                                   @RequestParam(value = "Events", required = false) Boolean events,
-	                                   @RequestParam(value = "Towns", required = false) Boolean towns) {
+	public Map<String, Object> getGyms(@RequestParam(value = "Users", required = false) String users,
+	                                   @RequestParam(value = "Events", required = false) String events,
+	                                   @RequestParam(value = "Towns", required = false) String towns) {
 		Map<String, Boolean> booleanMap = new HashMap<>();
-		booleanMap.put("Users", users == null ? false : users);
-		booleanMap.put("Events", events == null ? false : events);
-		booleanMap.put("Towns", towns == null ? false : towns);
+		booleanMap.put("Users", Boolean.valueOf(users));
+		booleanMap.put("Events", Boolean.valueOf(events));
+		booleanMap.put("Towns", Boolean.valueOf(towns));
 		return gymService.getGyms(booleanMap);
 	}
 }

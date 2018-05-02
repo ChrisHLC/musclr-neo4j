@@ -20,13 +20,13 @@ public class EventController {
 	}
 
 	@GetMapping("")
-	public Map<String, Object> getEvents(@RequestParam(value = "Users", required = false) Boolean users,
-	                                     @RequestParam(value = "Gyms", required = false) Boolean gyms,
-	                                     @RequestParam(value = "Towns", required = false) Boolean towns) {
+	public Map<String, Object> getEvents(@RequestParam(value = "Users", required = false) String users,
+	                                     @RequestParam(value = "Gyms", required = false) String gyms,
+	                                     @RequestParam(value = "Towns", required = false) String towns) {
 		Map<String, Boolean> booleanMap = new HashMap<>();
-		booleanMap.put("Users", users == null ? false : users);
-		booleanMap.put("Gyms", gyms == null ? false : gyms);
-		booleanMap.put("Towns", towns == null ? false : towns);
+		booleanMap.put("Users", Boolean.valueOf(users));
+		booleanMap.put("Gyms", Boolean.valueOf(gyms));
+		booleanMap.put("Towns", Boolean.valueOf(towns));
 		return eventService.getEvents(booleanMap);
 	}
 }
