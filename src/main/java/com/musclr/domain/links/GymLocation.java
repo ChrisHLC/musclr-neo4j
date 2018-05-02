@@ -6,22 +6,15 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.neo4j.ogm.annotation.*;
+import org.neo4j.ogm.annotation.RelationshipEntity;
 
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @RelationshipEntity(type = "GYM_LOCATION")
-public class GymLocation {
+public class GymLocation extends Link<Gym, Town> {
 
-    @Id
-    @GeneratedValue
-    private Long id;
+	private String label = "Gym location";
 
-    @StartNode
-    private Gym source;
-
-    @EndNode
-    private Town target;
 }

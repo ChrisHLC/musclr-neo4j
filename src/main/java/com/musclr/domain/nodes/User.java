@@ -1,13 +1,9 @@
 package com.musclr.domain.nodes;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.musclr.domain.links.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import org.neo4j.ogm.annotation.GeneratedValue;
-import org.neo4j.ogm.annotation.Id;
-import org.neo4j.ogm.annotation.NodeEntity;
+import lombok.*;
 import org.neo4j.ogm.annotation.Relationship;
 
 import java.util.ArrayList;
@@ -17,30 +13,32 @@ import java.util.List;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@NodeEntity
-public class User {
+@EqualsAndHashCode(callSuper = false)
+public class User extends Node {
 
-    @Id
-    @GeneratedValue
-    private Long id;
-    private String group;
-    private String email;
-    private String username;
-    private String role;
-    private String level;
+	private String group = "users";
 
-    @Relationship(type = "FRIEND", direction = Relationship.UNDIRECTED)
-    private List<Friend> friends = new ArrayList<>();
+	private String email;
 
-    @Relationship(type = "COACH", direction = Relationship.UNDIRECTED)
-    private List<Coach> coaches = new ArrayList<>();
+	private String username;
 
-    @Relationship(type = "PARTICIPATE")
-    private List<Participate> participates = new ArrayList<>();
+	private String role;
 
-    @Relationship(type = "LIVE")
-    private UserLocation userLocation;
+	private String level;
 
-    @Relationship(type = "TRAIN")
-    private List<Train> trains = new ArrayList<>();
+//	@Relationship(type = "FRIEND", direction = Relationship.UNDIRECTED)
+//	private List<Friend> friends = new ArrayList<>();
+//
+//	@Relationship(type = "COACH", direction = Relationship.UNDIRECTED)
+//	private List<Coach> coaches = new ArrayList<>();
+//
+//	@JsonIgnoreProperties
+//	@Relationship(type = "PARTICIPATE")
+//	private List<Participate> participates = new ArrayList<>();
+//
+//	@Relationship(type = "LIVE")
+//	private List<UserLocation> userLocation;
+//
+//	@Relationship(type = "TRAIN")
+//	private List<Train> trains = new ArrayList<>();
 }

@@ -1,15 +1,24 @@
 package com.musclr.repositories;
 
+import com.musclr.domain.links.EventLocation;
+import com.musclr.domain.links.Participate;
+import com.musclr.domain.links.Situated;
 import com.musclr.domain.nodes.Event;
 import org.springframework.data.neo4j.annotation.Query;
-import org.springframework.data.neo4j.repository.Neo4jRepository;
-import org.springframework.data.repository.query.Param;
 
 import java.util.Collection;
 
-public interface EventRepository extends Neo4jRepository<Event, Long> {
+public interface EventRepository extends NodeRepository<Event, Long> {
 
-	@Query("MATCH (e:Event)-[r:PARTICIPATE]-(u:User) RETURN e,r,u LIMIT {limit}")
-	Collection<Event> getEvents(@Param("limit") int limit);
+	@Query("MATCH (e:Event) RETURN e")
+	Collection<Event> getNodes();
 
+	@Query("MATCH (e:Event)-[r:PARTICIPATE]-(u:User) RETURN e,r,u")
+	Collection<Participate> getUsers();
+
+	@Query("MATCH (e:Event)-[r:EVENT_LOCATION]-(t:Town) RETURN e,r,t")
+	Collection<EventLocation> getTowns();
+
+	@Query("MATCH (e:Event)-[r:SITUATED]-(g:Gym) RETURN e,r,g")
+	Collection<Situated> getGyms();
 }

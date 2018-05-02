@@ -1,6 +1,6 @@
 package com.musclr.services;
 
-import com.musclr.repositories.EventRepository;
+import com.musclr.repositories.GymRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -13,19 +13,19 @@ import static com.musclr.domain.KeysName.*;
 import static com.musclr.services.util.Neo4jToD3.getLinkedNodes;
 
 @Service
-public class EventService {
+public class GymService {
 
-	private final EventRepository eventRepository;
+	private final GymRepository gymRepository;
 	private final List<String> nodeKeyList = Arrays.asList(ID, LABEL, GROUP);
 	private final List<String> linkKeyList = Collections.singletonList(LABEL);
 
-	public EventService(EventRepository eventRepository) {
-		this.eventRepository = eventRepository;
+	public GymService(GymRepository gymRepository) {
+		this.gymRepository = gymRepository;
 	}
 
 	@Transactional(readOnly = true)
-	public Map<String, Object> getEvents(Map<String, Boolean> booleanMap) {
-		return getLinkedNodes(eventRepository, nodeKeyList, linkKeyList, booleanMap);
+	public Map<String, Object> getGyms(Map<String, Boolean> booleanMap) {
+		return getLinkedNodes(gymRepository, nodeKeyList, linkKeyList, booleanMap);
 	}
 
 }
