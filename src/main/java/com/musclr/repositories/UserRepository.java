@@ -6,7 +6,6 @@ import com.musclr.domain.links.Train;
 import com.musclr.domain.links.UserLocation;
 import com.musclr.domain.nodes.User;
 import org.springframework.data.neo4j.annotation.Query;
-import org.springframework.data.neo4j.repository.Neo4jRepository;
 
 import java.util.Collection;
 
@@ -22,7 +21,10 @@ public interface UserRepository extends NodeRepository<User, Long> {
     Collection<UserLocation> getTowns();
 
     @Query("MATCH (u:User)-[r:PARTICIPATE]-(e:Event) RETURN u,r,e")
-    Collection<Participate> getEvents();
+    Collection<Participate> getParticipatedEvents();
+    
+    @Query("MATCH (u:User)-[r:CREATE]-(e:Event) RETURN u,r,e")
+    Collection<Participate> getCreatedEvents();
 
     @Query("MATCH (u:User)-[r:TRAIN]-(g:Gym) RETURN u,r,g")
     Collection<Train> getGyms();

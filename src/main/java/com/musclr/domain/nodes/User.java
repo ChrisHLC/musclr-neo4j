@@ -1,13 +1,6 @@
 package com.musclr.domain.nodes;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.musclr.domain.links.*;
 import lombok.*;
-import org.neo4j.ogm.annotation.Relationship;
-
-import java.util.ArrayList;
-import java.util.List;
 
 @Getter
 @Setter
