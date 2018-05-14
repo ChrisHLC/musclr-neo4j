@@ -17,7 +17,7 @@ public class TownService {
 
 	private final TownRepository townRepository;
 	private final List<String> nodeKeyList = Arrays.asList(ID, LABEL, GROUP);
-	private final List<String> linkKeyList = Collections.singletonList(LABEL);
+	private final List<String> linkKeyList = Arrays.asList(LABEL, DIRECTED);
 
 	public TownService(TownRepository townRepository) {
 		this.townRepository = townRepository;

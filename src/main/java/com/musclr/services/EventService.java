@@ -5,7 +5,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
@@ -17,7 +16,7 @@ public class EventService {
 
 	private final EventRepository eventRepository;
 	private final List<String> nodeKeyList = Arrays.asList(ID, LABEL, GROUP);
-	private final List<String> linkKeyList = Collections.singletonList(LABEL);
+	private final List<String> linkKeyList = Arrays.asList(LABEL, DIRECTED);
 
 	public EventService(EventRepository eventRepository) {
 		this.eventRepository = eventRepository;

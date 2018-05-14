@@ -29,4 +29,8 @@ public class Link<S extends Node, T extends Node> {
 	public String getLabel() {
 		return null;
 	}
+
+	public boolean getDirected(){
+		return true;
+	}
 }

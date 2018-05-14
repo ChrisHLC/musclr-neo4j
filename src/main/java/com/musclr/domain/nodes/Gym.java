@@ -18,13 +18,4 @@ public class Gym extends Node {
 
 	private String group = "gyms";
 
-//	@Relationship(type = "GYM_LOCATION")
-//	private List<GymLocation> gymLocation;
-//
-//	@Relationship(type = "TRAIN", direction = Relationship.INCOMING)
-//	private List<Train> users = new ArrayList<>();
-//
-//	@Relationship(type = "SITUATED", direction = Relationship.INCOMING)
-//	private List<Situated> situateds = new ArrayList<>();
-
 }

@@ -26,19 +26,4 @@ public class User extends Node {
 
 	private String level;
 
-//	@Relationship(type = "FRIEND", direction = Relationship.UNDIRECTED)
-//	private List<Friend> friends = new ArrayList<>();
-//
-//	@Relationship(type = "COACH", direction = Relationship.UNDIRECTED)
-//	private List<Coach> coaches = new ArrayList<>();
-//
-//	@JsonIgnoreProperties
-//	@Relationship(type = "PARTICIPATE")
-//	private List<Participate> participates = new ArrayList<>();
-//
-//	@Relationship(type = "LIVE")
-//	private List<UserLocation> userLocation;
-//
-//	@Relationship(type = "TRAIN")
-//	private List<Train> trains = new ArrayList<>();
 }

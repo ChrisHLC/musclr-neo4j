@@ -17,7 +17,7 @@ public class GymService {
 
 	private final GymRepository gymRepository;
 	private final List<String> nodeKeyList = Arrays.asList(ID, LABEL, GROUP);
-	private final List<String> linkKeyList = Collections.singletonList(LABEL);
+	private final List<String> linkKeyList = Arrays.asList(LABEL, DIRECTED);
 
 	public GymService(GymRepository gymRepository) {
 		this.gymRepository = gymRepository;

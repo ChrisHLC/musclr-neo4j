@@ -15,4 +15,9 @@ import org.neo4j.ogm.annotation.RelationshipEntity;
 public class Friend extends Link<User, User> {
 
 	private String label = "Friend";
+
+	@Override
+	public boolean getDirected() {
+		return false;
+	}
 }
