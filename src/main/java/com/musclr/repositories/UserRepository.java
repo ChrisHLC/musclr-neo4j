@@ -20,11 +20,9 @@ public interface UserRepository extends NodeRepository<User, Long> {
     @Query("MATCH (u:User)-[r:USER_LOCATION]-(t:Town) RETURN u,r,t")
     Collection<UserLocation> getTowns();
 
-    @Query("MATCH (u:User)-[r:PARTICIPATE]-(e:Event) RETURN u,r,e")
-    Collection<Participate> getParticipatedEvents();
+    @Query("MATCH (u:User)-[r:PARTICIPATE|CREATE]-(e:Event) RETURN u,r,e")
+    Collection<Participate> getEvents();
     
-    @Query("MATCH (u:User)-[r:CREATE]-(e:Event) RETURN u,r,e")
-    Collection<Participate> getCreatedEvents();
 
     @Query("MATCH (u:User)-[r:TRAIN]-(g:Gym) RETURN u,r,g")
     Collection<Train> getGyms();
