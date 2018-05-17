@@ -1,19 +1,80 @@
+CREATE (Julia:User {label:'Julia Capulet', role:'MusclR', level:'Bronze'})
+CREATE (Romeo:User {label:'Roméo Montaigu', role:'CoachR', level:'Gold'})
+
 CREATE (Keanu:User {label:'Keanu Reeves', role:'CoachR', level:'Gold'})
 CREATE (Carrie:User {label:'Carrie-Anne Moss', role:'MusclR', level:'Silver'})
 CREATE (Laurence:User {label:'Laurence Fishburne', role:'MusclR', level:'Bronze'})
 CREATE (Hugo:User {label:'Hugo Weaving', role:'MusclR', level:'Silver'})
 CREATE (LillyW:User {label:'Lilly Wachowski', role:'MusclR', level:'Gold'})
 CREATE (LanaW:User {label:'Lana Wachowski', role:'MusclR', level:'Silver'})
+
+CREATE (Josh:User {label:'Josh Brolin', role:'CoachR', level:'Gold'})
+CREATE (ChrisH:User {label:'Chris Hemsworth', role:'CoachR', level:'Gold'})
+CREATE (ChrisE:User {label:'Chris Evans', role:'MusclR', level:'Bronze'})
+CREATE (Chadwick:User {label:'Chadwick Boseman', role:'MusclR', level:'Silver'})
 CREATE (ScarlettJ:User {label:'Scarlett Johanson', role:'MusclR', level:'Bronze'})
-CREATE (Chris:User {label:'Chris Pratt', role:'CoachR', level:'Gold'})
+CREATE (ChrisP:User {label:'Chris Pratt', role:'CoachR', level:'Gold'})
 CREATE (Elizabeth:User {label:'Elizabeth Olsen', role:'MusclR', level:'Silver'})
 CREATE (Mark:User {label:'Mark Ruffalo', role:'MusclR', level:'Bronze'})
-CREATE (Benedict:User {label:'Benedict Cumberbatch', role:'CoachR', level:'Gold'})
+CREATE (BenedictC:User {label:'Benedict Cumberbatch', role:'Musclr', level:'Silver'})
 CREATE (Robert:User {label:'Robert Downey Jr', role:'MusclR', level:'Gold'})
+CREATE (Paul:User {label:'Paul Bettany', role:'MusclR', level:'Bronze'})
 CREATE (Gwyneth:User {label:'Gwyneth Paltrow', role:'MusclR', level:'Silver'})
+CREATE (Sebastian:User {label:'Sebastian Stan', role:'MusclR', level:'Bronze'})
+CREATE (Anthony:User {label:'Anthony Mackie', role:'MusclR', level:'Silver'})
+CREATE (Don:User {label:'Don Cheadle', role:'MusclR', level:'Bronze'})
+CREATE (Bradley:User {label:'Bradley Cooper', role:'CoachR', level:'Gold'})
+CREATE (Terry:User {label:'Terry Notary', role:'MusclR', level:'Bronze'})
+CREATE (David:User {label:'David Bautista', role:'MusclR', level:'Gold'})
+CREATE (Winston:User {label:'Winston Duke', role:'MusclR', level:'Silver'})
+CREATE (Danai:User {label:'Danai Gurira', role:'CoachR', level:'Gold'})
 CREATE (Karen:User {label:'Karen Gillan', role:'MusclR', level:'Silver'})
-CREATE (Tom:User {label:'Tom Holland', role:'CoachR', level:'Bronze'})
+CREATE (TomHo:User {label:'Tom Holland', role:'MusclR', level:'Bronze'})
 CREATE (Zoe:User {label:'Zoe Saldana ', role:'MusclR', level:'Gold'})
+CREATE (TomV:User {label:'Tom Vaughan-Lawlor', role:'MusclR', level:'Bronze'})
+CREATE (Pom:User {label:'Pom Klementieff', role:'MusclR', level:'Silver'})
+CREATE (CarrieC:User {label:'Carrie Coon', role:'MusclR', level:'Bronze'})
+CREATE (Vin:User {label:'Vin Diesel', role:'MusclR', level:'Gold'})
+CREATE (Peter:User {label:'Peter Dinklage', role:'MusclR', level:'Bronze'})
+CREATE (Michael:User {label:'Michael James Shaw', role:'MusclR', level:'Silver'})
+CREATE (BenedictW:User {label:'Benedict Wong', role:'MusclR', level:'Silver'})
+CREATE (Letitia:User {label:'Letitia Wright', role:'MusclR', level:'Gold'})
+CREATE (TomHi:User {label:'Tom Hiddleston', role:'MusclR', level:'Gold'})
+CREATE (Idris:User {label:'Idris Elba', role:'MusclR', level:'Gold'})
+CREATE (Ross:User {label:'Ross Marquand', role:'MusclR', level:'Bronze'})
+CREATE (Benicio:User {label:'Benicio del Toro', role:'MusclR', level:'Bronze'})
+CREATE (Kerry:User {label:'Kerry Condon', role:'CoachR', level:'Gold'})
+CREATE (Jacob:User {label:'Jacob Batalon', role:'MusclR', level:'Bronze'})
+CREATE (Florence:User {label:'Florence Kasumba', role:'MusclR', level:'Silver'})
+CREATE (Isabella:User {label:'Isabella Amara', role:'MusclR', level:'Gold'})
+CREATE (Samuel:User {label:'Samuel L. Jackson', role:'CoachR', level:'Gold'})
+CREATE (Cobie:User {label:'Cobie Smulders', role:'MusclR', level:'Silver'})
+CREATE (Lou:User {label:'Lou Ferrigno', role:'MusclR', level:'Bronze'})
+CREATE (Stan:User {label:'Stan Lee', role:'CoachR', level:'Gold'})
+
+CREATE (Ben:User {label:'Ben Affleck', role:'MusclR', level:'Gold'})
+CREATE (Henry:User {label:'Henry Cavill', role:'CoachR', level:'Gold'})
+CREATE (Amy:User {label:'Amy Adams', role:'MusclR', level:'Bronze'})
+CREATE (Gal:User {label:'Gal Gadot', role:'CoachR', level:'Gold'})
+CREATE (Ezra:User {label:'Ezra Miller', role:'MusclR', level:'Silver'})
+CREATE (Jason:User {label:'Jason Momoa', role:'MusclR', level:'Gold'})
+CREATE (Ray:User {label:'Ray Fisher', role:'MusclR', level:'Silver'})
+CREATE (Jeremy:User {label:'Jeremy Irons', role:'CoachR', level:'Gold'})
+CREATE (Diane:User {label:'Diane Lane', role:'MusclR', level:'Bronze'})
+CREATE (Connie:User {label:'Connie Nielsen', role:'MusclR', level:'Silver'})
+CREATE (Jonathan:User {label:'Jonathan Simmons', role:'MusclR', level:'Silver'})
+CREATE (Ciarán:User {label:'Ciarán Hinds', role:'MusclR', level:'Gold'})
+CREATE (Amber:User {label:'Amber Heard', role:'MusclR', level:'Bronze'})
+CREATE (Joe:User {label:'Joe Morton', role:'MusclR', level:'Silver'})
+CREATE (Lisa:User {label:'Lisa Loven Kongsli', role:'MusclR', level:'Gold'})
+CREATE (DavidT:User {label:'David Thewlis', role:'CoachR', level:'Gold'})
+CREATE (Sergi:User {label:'Sergi Constance', role:'CoachR', level:'Gold'})
+CREATE (Julian:User {label:'Julian Lewis Jones', role:'MusclR', level:'Silver'})
+CREATE (Kobna:User {label:'Kobna Holdbrook-Smith', role:'MusclR', level:'Bronze'})
+CREATE (Doutzen:User {label:'Doutzen Kroes', role:'MusclR', level:'Gold'})
+CREATE (Billy:User {label:'Billy Crudup', role:'MusclR', level:'Silver'})
+CREATE (Robin:User {label:'Robin Wright', role:'MusclR', level:'Bronze'})
+CREATE (Jesse:User {label:'Jesse Eisenberg', role:'MusclR', level:'Gold'})
 
 CREATE (jambe:Event {label:'jambe'})
 CREATE (biceps:Event {label:'biceps'})
@@ -22,14 +83,74 @@ CREATE (fessiers:Event {label:'fessiers'})
 CREATE (abdo:Event {label:'abdo'})
 CREATE (triceps:Event {label:'triceps'})
 CREATE (ischios:Event {label:'ischios'})
-CREATE (abdoFessiers:Event {label:'abdoFessiers'})
-CREATE (dosBiceps:Event {label:'dosBiceps'})
+CREATE (abdoFessiers:Event {label:'abdo Fessiers'})
+CREATE (dosBiceps:Event {label:'dos Biceps'})
+CREATE (Leg:Event {label:'Leg'})
+CREATE (back:Event {label:'back'})
+CREATE (beginner:Event {label:'MusclR Beginner Workout'})
+CREATE (fullbody:Event {label:'Full Body'})
+CREATE (halfbody:Event {label:'Half Body'})
+CREATE (batman:Event {label:'Batman daily workout'})
+CREATE (superman:Event {label:'SuperMan or Girl workout'})
+CREATE (flash:Event {label:'Get as fast as Flash'})
+CREATE (who:Event {label:'Wonder Whos that man'})
+CREATE (aquaman:Event {label:'Swim like Aquaman'})
+CREATE (cyborg:Event {label:'Become a Cyborg'})
+CREATE (batgirl:Event {label:'Workout for batgirls'})
+CREATE (vibe:Event {label:'Vibe your muscle'})
+CREATE (harcore:Event {label:'Hardcore workout'})
+CREATE (lift:Event {label:'Power your lift'})
+CREATE (stronglift:Event {label:'StrongLifts 5x5'})
+CREATE (cutting:Event {label:'1 Week Cutting Plan'})
+CREATE (lean:Event {label:'Putting on lean muscle'})
+CREATE (menfitness:Event {label:'Mens fitness'})
+CREATE (bulking:Event {label:'6 Days Bulking Split'})
+CREATE (women:Event {label:'Womens Body Toning'})
+CREATE (beast:Event {label:'Be a beast'})
+CREATE (hypertrophy:Event {label:'Hypertrophy week plan'})
+CREATE (fat:Event {label:'Get Fat'})
+CREATE (skinny:Event {label:'Get skinny'})
+CREATE (never:Event {label:'Never get strong'})
+CREATE (swiss:Event {label:'Swiss no pain no gain,'})
+CREATE (nomuscles:Event {label:'I dont have muscles'})
+CREATE (armstrong:Event {label:'Armstrong workout'})
+
 
 CREATE (fitness:Gym {label:'Fitness Park'})
 CREATE (montana:Gym {label:'Montana'})
+CREATE (Neoness:Gym {label:'Neoness'})
+CREATE (gigafit:Gym {label:'GigaFit'})
+CREATE (cercle:Gym {label:'Cercle de la Forme'})
+CREATE (flashgym:Gym {label:'Flash Fitness'})
+CREATE (feel:Gym {label:'Feel sport'})
+CREATE (Basic:Gym {label:'Basic Fit'})
+CREATE (alliance:Gym {label:'Alliance Forme'})
+CREATE (easy:Gym {label:'EasyForm'})
+CREATE (lady:Gym {label:'Lady Fit'})
+CREATE (moving:Gym {label:'CLub Moving'})
+CREATE (energie:Gym {label:'Energie sport'})
+CREATE (magic:Gym {label:'Magic Form'})
+CREATE (cap:Gym {label:'Cap Tonic'})
+CREATE (orange:Gym {label:'Orange Bleue'})
+CREATE (gym:Gym {label:'Gym Flash'})
 
 CREATE (stdiz:Town {label:'Saint-Dizier'})
 CREATE (juvisy:Town {label:'Juvisy'})
+CREATE (aulnay:Town {label:'Aulnay sous bois'})
+CREATE (paris:Town {label:'Paris'})
+CREATE (courbevoie:Town {label:'Courbevoie'})
+CREATE (montrouge:Town {label:'Montrouge'})
+CREATE (reims:Town {label:'Reims'})
+CREATE (meudon:Town {label:'Meudon'})
+CREATE (buc:Town {label:'Buc'})
+CREATE (versailles:Town {label:'Versailles'})
+CREATE (stDenis:Town {label:'Saint Denis'})
+CREATE (bondy:Town {label:'Bondy'})
+CREATE (bobigny:Town {label:'Bobigny'})
+CREATE (drancy:Town {label:'Drancy'})
+CREATE (cergy:Town {label:'Cergy'})
+CREATE (marseilles:Town {label:'Marseilles'})
+
 
 CREATE
   (Keanu)-[:COACH]->(Carrie),
@@ -38,61 +159,380 @@ CREATE
   (Keanu)-[:FRIEND]->(LillyW),
   (Keanu)-[:FRIEND]->(LanaW),
   (Keanu)-[:FRIEND]->(JoelS),
+  
+  (Romeo)-[:COACH]->(Julia),
+  (Romeo)-[:FRIEND]->(Keanu),
+  (Romeo)-[:FRIEND]->(Robert),
+  (Romeo)-[:FRIEND]->(Zoe),
+  (Romeo)-[:FRIEND]->(Ben),
+  (Romeo)-[:FRIEND]->(Lisa),
+  (Romeo)-[:COACH]->(ChrisE),
+  (Romeo)-[:FRIEND]->(Gwyneth),
+  (Romeo)-[:FRIEND]->(Pom),
+  (Romeo)-[:FRIEND]->(Jonathan),
+  (Romeo)-[:FRIEND]->(Julian),
+  (Romeo)-[:FRIEND]->(BenedictW),
+  (Romeo)-[:COACH]->(Ross),
+  (Romeo)-[:FRIEND]->(David),
+  (Romeo)-[:FRIEND]->(Kerry),
+  (Romeo)-[:FRIEND]->(Stan),
+  (Romeo)-[:FRIEND]->(Letitia),
+  (Romeo)-[:FRIEND]->(Jesse),
+  
   (Robert)-[:FRIEND]->(Keanu),
   (Robert)-[:FRIEND]->(ScarlettJ),
   (Robert)-[:FRIEND]->(Elizabeth),
   (Robert)-[:FRIEND]->(Mark),
   (Robert)-[:FRIEND]->(Tom),
   (Robert)-[:FRIEND]->(Gwyneth),
-  (Chris)-[:COACH]->(Mark),
-  (Chris)-[:FRIEND]->(Karen),
-  (Chris)-[:FRIEND]->(Zoe),
-  (Chris)-[:FRIEND]->(Elizabeth),
-  (Chris)-[:COACH]->(Gwyneth),
-  (Chris)-[:FRIEND]->(Benedict),
+  
+  
+  (Josh)-[:FRIEND]->(ChrisH),
+  (Josh)-[:FRIEND]->(Chadwick),
+  (Josh)-[:FRIEND]->(ScarlettJ),
+  (Josh)-[:FRIEND]->(ChrisP),
+  (Josh)-[:FRIEND]->(Elizabeth),
+  (Josh)-[:FRIEND]->(BenedictC),
+  
+  (Mark)-[:FRIEND]->(BenedictC),
+  (Mark)-[:FRIEND]->(Paul),
+  (Mark)-[:FRIEND]->(Sebastian),
+  (Mark)-[:FRIEND]->(Anthony),
+  (Mark)-[:FRIEND]->(Don),
+  
+  (Bradley)-[:COACH]->(Terry),
+  (Bradley)-[:FRIEND]->(David),
+  (Bradley)-[:FRIEND]->(Winston),
+  (Bradley)-[:FRIEND]->(Danai),
+  (Bradley)-[:COACH]->(Karen),
+  (Bradley)-[:FRIEND]->(TomHo),
+  
+  (Zoe)-[:FRIEND]->(Bradley),
+  (Zoe)-[:FRIEND]->(Pom),
+  (Zoe)-[:FRIEND]->(Carrie),
+  (Zoe)-[:FRIEND]->(Vin),
+  (Zoe)-[:FRIEND]->(Peter),
+  (Zoe)-[:FRIEND]->(Michael),
+  (Zoe)-[:FRIEND]->(Laurence),
+  (Zoe)-[:FRIEND]->(ChrisP),
+  (Zoe)-[:FRIEND]->(BenedictW),
+  (Zoe)-[:FRIEND]->(Letitia),
+  
+  (TomHi)-[:FRIEND]->(Zoe),
+  (TomHi)-[:FRIEND]->(Idris),
+  (TomHi)-[:FRIEND]->(Ross),
+  (TomHi)-[:FRIEND]->(Benicio),
+  (TomHi)-[:FRIEND]->(Kerry),
+  (TomHi)-[:FRIEND]->(Jacob),
+  (TomHi)-[:FRIEND]->(Florence),
+  (TomHi)-[:FRIEND]->(Isabella),
+  (TomHi)-[:FRIEND]->(Samuel),
+  (TomHi)-[:FRIEND]->(Cobie),
+  
+  (Lou)-[:FRIEND]->(TomHi),
+  (Lou)-[:FRIEND]->(Stan),
+  (Lou)-[:FRIEND]->(Ben),
+  (Lou)-[:FRIEND]->(Henry),
+  (Lou)-[:FRIEND]->(Gal),
+  (Lou)-[:FRIEND]->(Ezra),
+  (Lou)-[:FRIEND]->(Jason),
+  (Lou)-[:FRIEND]->(Ray),
+  (Lou)-[:FRIEND]->(Jeremy),
+  (Lou)-[:FRIEND]->(Diane),
+  
+  (Connie)-[:FRIEND]->(Lou),
+  (Connie)-[:FRIEND]->(Jonathan),
+  (Connie)-[:FRIEND]->(Ciarán),
+  (Connie)-[:FRIEND]->(Amber),
+  (Connie)-[:FRIEND]->(Joe),
+  (Connie)-[:FRIEND]->(Lisa),
+  (Connie)-[:FRIEND]->(DavidT),
+  (Connie)-[:FRIEND]->(Sergi),
+  (Connie)-[:FRIEND]->(Julian),
+  (Connie)-[:FRIEND]->(Kobna),
+  
+  (Kobna)-[:FRIEND]->(Joe),
+  (Kobna)-[:FRIEND]->(Doutzen),
+  (Kobna)-[:FRIEND]->(Billy),
+  (Kobna)-[:FRIEND]->(Robin),
+  (Kobna)-[:FRIEND]->(Jesse),
+  (Kobna)-[:FRIEND]->(Gal),
   
   (Keanu)-[:CREATE]->(biceps),
-  (Laurence)-[:CREATE]->(jambe),
-  (Keanu)-[:CREATE]->(dos),
-  (LanaW)-[:CREATE]->(fessiers),
-  (Elizabeth)-[:CREATE]->(abdo),
-  (Chris)-[:CREATE]->(triceps),
-  (Benedict)-[:CREATE]->(abdoFessiers),
-  (LanaW)-[:CREATE]->(ischios),
-  (Robert)-[:CREATE]->(dosBiceps),
-  
+  (ChrisH)-[:CREATE]->(jambe),
+  (Bradley)-[:CREATE]->(dos),
+  (Danai)-[:CREATE]->(fessiers),
+  (Kerry)-[:CREATE]->(abdo),
+  (Samuel)-[:CREATE]->(triceps),
+  (Stan)-[:CREATE]->(abdoFessiers),
+  (Gal)-[:CREATE]->(ischios),
+  (DavidT)-[:CREATE]->(dosBiceps),
+  (Keanu)-[:CREATE]->(Leg),
+  (ChrisH)-[:CREATE]->(back),
+  (Bradley)-[:CREATE]->(beginner),
+  (Danai)-[:CREATE]->(fullbody),
+  (Kerry)-[:CREATE]->(halfbody),
+  (Ben)-[:CREATE]->(batman),
+  (Henry)-[:CREATE]->(superman),
+  (Ezra)-[:CREATE]->(flash),
+  (BenedictW)-[:CREATE]->(who),
+  (Jason)-[:CREATE]->(aquaman),
+  (Ray)-[:CREATE]->(cyborg),
+  (Gal)-[:CREATE]->(batgirl),
+  (Romeo)-[:CREATE]->(vibe),
+  (Romeo)-[:CREATE]->(harcore),
+  (Romeo)-[:CREATE]->(lift),
+  (Romeo)-[:CREATE]->(stronglift),
+  (Gal)-[:CREATE]->(cutting),
+  (Gal)-[:CREATE]->(lean),
+  (Gal)-[:CREATE]->(menfitness),
+  (Gal)-[:CREATE]->(women),
+  (Danai)-[:CREATE]->(bulking),
+  (Danai)-[:CREATE]->(beast),
+  (Danai)-[:CREATE]->(hypertrophy),
+  (Kerry)-[:CREATE]->(skinny),
+  (Kerry)-[:CREATE]->(never),
+  (Kerry)-[:CREATE]->(swiss),
+  (Kerry)-[:CREATE]->(nomuscles),
+  (Kerry)-[:CREATE]->(armstrong),
+        
    
-  (Laurence)-[:PARTICIPATE]->(biceps),
+  (Laurence)-[:PARTICIPATE]->(jambe),
   (Hugo)-[:PARTICIPATE]->(jambe),
-  (JoelS)-[:PARTICIPATE]->(biceps),
-  (Keanu)-[:PARTICIPATE]->(jambe),
+  (JoelS)-[:PARTICIPATE]->(jambe),
+  (Kerry)-[:PARTICIPATE]->(jambe),
+  (LanaW)-[:PARTICIPATE]->(jambe),
+  (Robert)-[:PARTICIPATE]->(biceps),
+  (Laurence)-[:PARTICIPATE]->(biceps),
   (LanaW)-[:PARTICIPATE]->(biceps),
+  (JoelS)-[:PARTICIPATE]->(biceps),
+  (TomHo)-[:PARTICIPATE]->(biceps),
+  (Terry)-[:PARTICIPATE]->(dos),
+  (Winston)-[:PARTICIPATE]->(dos),
+  (Danai)-[:PARTICIPATE]->(dos),
+  (TomHo)-[:PARTICIPATE]->(dos),
+  (Bradley)-[:PARTICIPATE]->(fessiers),
+  (TomHo)-[:PARTICIPATE]->(fessiers),
+  (Gwyneth)-[:PARTICIPATE]->(fessiers),
   (Robert)-[:PARTICIPATE]->(fessiers),
-  (Chris)-[:PARTICIPATE]->(jambe),
-  (Elizabeth)-[:PARTICIPATE]->(biceps),
-  (Tom)-[:PARTICIPATE]->(jambe),
-  (Tom)-[:PARTICIPATE]->(biceps),
+  (TomHi)-[:PARTICIPATE]->(abdo),
+  (Romeo)-[:PARTICIPATE]->(abdo),
+  (Lisa)-[:PARTICIPATE]->(abdo),
+  (Letitia)-[:PARTICIPATE]->(abdo),
+  (Robert)-[:PARTICIPATE]->(abdo),
+  (ChrisP)-[:PARTICIPATE]->(abdo),
+  (Zoe)-[:PARTICIPATE]->(abdo),
+  (Keanu)-[:PARTICIPATE]->(abdo), 
+  (TomHi)-[:PARTICIPATE]->(triceps),
+  (Lou)-[:PARTICIPATE]->(triceps),
+  (Jacob)-[:PARTICIPATE]->(triceps),
+  (Isabella)-[:PARTICIPATE]->(triceps),
+  (Ross)-[:PARTICIPATE]->(triceps),
+  (Romeo)-[:PARTICIPATE]->(triceps),
   (Zoe)-[:PARTICIPATE]->(triceps),
-  (Karen)-[:PARTICIPATE]->(jambe),
-  (Chris)-[:PARTICIPATE]->(dos),
-  (Benedict)-[:PARTICIPATE]->(dos),
-  (Mark)-[:PARTICIPATE]->(biceps),
-  (Scarlett)-[:PARTICIPATE]->(abdoFessiers),
-  (Gwyneth)-[:PARTICIPATE]->(abdoFessiers),
-  (Robert)-[:PARTICIPATE]->(biceps),
-  (Chris)-[:PARTICIPATE]->(jambe),
-  (Zoe)-[:PARTICIPATE]->(fessiers),
-  (Scarlett)-[:PARTICIPATE]->(ischios),
-  (Gwyneth)-[:PARTICIPATE]->(abdoFessiers),
-  (Robert)-[:PARTICIPATE]->(biceps),
-  (Chris)-[:PARTICIPATE]->(dosBiceps),
-  (Zoe)-[:PARTICIPATE]->(ischios),
-
-  (Keanu)-[:USER_LOCATION]->(juvisy),
+  (Lou)-[:PARTICIPATE]->(abdoFessiers),
+  (Ezra)-[:PARTICIPATE]->(abdoFessiers),
+  (Gal)-[:PARTICIPATE]->(abdoFessiers),
+  (Jason)-[:PARTICIPATE]->(abdoFessiers),
+  (Robert)-[:PARTICIPATE]->(ischios),
+  (Laurence)-[:PARTICIPATE]->(ischios),
+  (ChrisH)-[:PARTICIPATE]->(ischios),
+  (Josh)-[:PARTICIPATE]->(ischios),
+  (ChrisP)-[:PARTICIPATE]->(ischios),
+  (Connie)-[:PARTICIPATE]->(dosBiceps),
+  (Jonathan)-[:PARTICIPATE]->(dosBiceps),
+  (Romeo)-[:PARTICIPATE]->(dosBiceps),
+  (Romeo)-[:PARTICIPATE]->(Leg),
+  (Romeo)-[:PARTICIPATE]->(Leg),
+  (Stan)-[:PARTICIPATE]->(Leg),
+  (Lou)-[:PARTICIPATE]->(Leg),
+  (Laurence)-[:PARTICIPATE]->(Leg),
+  (Josh)-[:PARTICIPATE]->(back),
+  (ChrisP)-[:PARTICIPATE]->(back),
+  (Diane)-[:PARTICIPATE]->(beginner),
+  (Amber)-[:PARTICIPATE]->(beginner),
+  (Robin)-[:PARTICIPATE]->(beginner),
+  (TomHo)-[:PARTICIPATE]->(beginner),
+  (Amber)-[:PARTICIPATE]->(fullbody),
+  (Bradley)-[:PARTICIPATE]->(fullbody),
+  (David)-[:PARTICIPATE]->(fullbody),
+  (TomHo)-[:PARTICIPATE]->(fullbody),
+  (BenedictC)-[:PARTICIPATE]->(fullbody),
+  (Josh)-[:PARTICIPATE]->(fullbody),
+  (TomHi)-[:PARTICIPATE]->(halfbody),
+  (Idris)-[:PARTICIPATE]->(halfbody),
+  (Isabella)-[:PARTICIPATE]->(halfbody),
+  (Jacob)-[:PARTICIPATE]->(halfbody),
+  (Zoe)-[:PARTICIPATE]->(halfbody),
+  (Bradley)-[:PARTICIPATE]->(halfbody),
+  (ChrisP)-[:PARTICIPATE]->(halfbody),
+  (Josh)-[:PARTICIPATE]->(halfbody),
+  
+  (Lou)-[:PARTICIPATE]->(batman),
+  (TomHi)-[:PARTICIPATE]->(batman),
+  (Gal)-[:PARTICIPATE]->(batman),
+  (Jason)-[:PARTICIPATE]->(batman),
+  (Zoe)-[:PARTICIPATE]->(batman),
+  (Peter)-[:PARTICIPATE]->(batman),
+  (Lou)-[:PARTICIPATE]->(superman),
+  (Jeremy)-[:PARTICIPATE]->(superman),
+  (Diane)-[:PARTICIPATE]->(superman),
+  (TomHi)-[:PARTICIPATE]->(superman),
+  (Zoe)-[:PARTICIPATE]->(who),
+  (Bradley)-[:PARTICIPATE]->(who),
+  (Vin)-[:PARTICIPATE]->(who),
+  (Winston)-[:PARTICIPATE]->(who),
+  (David)-[:PARTICIPATE]->(who),
+  (TomHo)-[:PARTICIPATE]->(aquaman),
+  (Mark)-[:PARTICIPATE]->(aquaman),
+  (BenedictC)-[:PARTICIPATE]->(aquaman),
+  
+  (Cobie)-[:PARTICIPATE]->(cyborg),
+  (Anthony)-[:PARTICIPATE]->(cyborg),
+  (Kobna)-[:PARTICIPATE]->(batgirl),
+  (Robin)-[:PARTICIPATE]->(batgirl),
+  (Connie)-[:PARTICIPATE]->(batgirl),
+  (Lou)-[:PARTICIPATE]->(batgirl),
+  (Robert)-[:PARTICIPATE]->(batgirl),
+  (TomHo)-[:PARTICIPATE]->(vibe),
+  (BenedictC)-[:PARTICIPATE]->(vibe),
+  (Zoe)-[:PARTICIPATE]->(vibe),
+  (ChrisE)-[:PARTICIPATE]->(vibe),
+  (Pom)-[:PARTICIPATE]->(vibe),
+  (Keanu)-[:PARTICIPATE]->(harcore),
+  (Robert)-[:PARTICIPATE]->(harcore),
+  (BenedictW)-[:PARTICIPATE]->(harcore),
+  (ScarlettJ)-[:PARTICIPATE]->(harcore),
+  (Mark)-[:PARTICIPATE]->(harcore),
+  (Sebastian)-[:PARTICIPATE]->(harcore),
+  
+  (Robert)-[:PARTICIPATE]->(lift),
+  (Mark)-[:PARTICIPATE]->(lift),
+  (ChrisE)-[:PARTICIPATE]->(stronglift),
+  (Robert)-[:PARTICIPATE]->(stronglift),
+  (Zoe)-[:PARTICIPATE]->(stronglift),
+  (ChrisP)-[:PARTICIPATE]->(stronglift),
+  (TomHi)-[:PARTICIPATE]->(stronglift),
+  (Kobna)-[:PARTICIPATE]->(cutting),
+  (Lou)-[:PARTICIPATE]->(cutting),
+  (Ben)-[:PARTICIPATE]->(cutting),
+  (ChrisE)-[:PARTICIPATE]->(cutting),
+  (Pom)-[:PARTICIPATE]->(lean),
+  (Keanu)-[:PARTICIPATE]->(lean),
+  (Robert)-[:PARTICIPATE]->(menfitness),
+  (BenedictC)-[:PARTICIPATE]->(menfitness),
+  (ScarlettJ)-[:PARTICIPATE]->(menfitness),
+  (Mark)-[:PARTICIPATE]->(menfitness),
+  (Sebastian)-[:PARTICIPATE]->(women),
+  
+  (Connie)-[:PARTICIPATE]->(women),
+  (Kobna)-[:PARTICIPATE]->(women),
+  (Lou)-[:PARTICIPATE]->(women),
+  (Robert)-[:PARTICIPATE]->(women),
+  (Bradley)-[:PARTICIPATE]->(beast),
+  (Mark)-[:PARTICIPATE]->(beast),
+  (Anthony)-[:PARTICIPATE]->(beast),
+  (Kerry)-[:PARTICIPATE]->(hypertrophy),
+  (TomHi)-[:PARTICIPATE]->(hypertrophy),
+  (Lou)-[:PARTICIPATE]->(hypertrophy),
+  (Samuel)-[:PARTICIPATE]->(skinny),
+  (Karen)-[:PARTICIPATE]->(skinny),
+  (ScarlettJ)-[:PARTICIPATE]->(skinny),
+  (Elizabeth)-[:PARTICIPATE]->(skinny),
+  (Zoe)-[:PARTICIPATE]->(never),
+  (Carrie)-[:PARTICIPATE]->(never),
+  (Mark)-[:PARTICIPATE]->(swiss),
+  (Sebastian)-[:PARTICIPATE]->(swiss),
+  
+  (Connie)-[:PARTICIPATE]->(swiss),
+  (Letitia)-[:PARTICIPATE]->(swiss),
+  (Jesse)-[:PARTICIPATE]->(swiss),
+  (Robert)-[:PARTICIPATE]->(nomuscles),
+  (Keanu)-[:PARTICIPATE]->(nomuscles),
+  (JoelS)-[:PARTICIPATE]->(nomuscles),
+  (ChrisE)-[:PARTICIPATE]->(nomuscles),
+  (Gwyneth)-[:PARTICIPATE]->(nomuscles),
+  (Jonathan)-[:PARTICIPATE]->(nomuscles),
+  (Lou)-[:PARTICIPATE]->(armstrong),
+  (Zoe)-[:PARTICIPATE]->(armstrong),
+  (Lisa)-[:PARTICIPATE]->(armstrong),
+  (ScarlettJ)-[:PARTICIPATE]->(armstrong),
+  (Mark)-[:PARTICIPATE]->(armstrong),
+  (TomHo)-[:PARTICIPATE]->(armstrong),
+  
+  
+  
+  (Keanu)-[:USER_LOCATION]->(stdiz),
   (Laurence)-[:USER_LOCATION]->(stdiz),
-
+  (Julia)-[:USER_LOCATION]->(juvisy),
+  (Romeo)-[:USER_LOCATION]->(juvisy),
+  (Carrie)-[:USER_LOCATION]->(stdiz),
+  (Hugo)-[:USER_LOCATION]->(stdiz),
+  (LillyW)-[:USER_LOCATION]->(stdiz),
+  (LanaW)-[:USER_LOCATION]->(stdiz),
+  (Josh)-[:USER_LOCATION]->(aulnay),
+  (ChrisH)-[:USER_LOCATION]->(aulnay),
+  (ChrisE)-[:USER_LOCATION]->(juvisy),
+  (Chadwick)-[:USER_LOCATION]->(aulnay),
+  (ScarlettJ)-[:USER_LOCATION]->(aulnay),
+  (ChrisP)-[:USER_LOCATION]->(aulnay),
+  (Elizabeth)-[:USER_LOCATION]->(courbevoie),
+  (Mark)-[:USER_LOCATION]->(stdiz),
+  (BenedictC)-[:USER_LOCATION]->(aulnay),
+  (Robert)-[:USER_LOCATION]->(courbevoie),
+  (Paul)-[:USER_LOCATION]->(juvisy),
+  (Gwyneth)-[:USER_LOCATION]->(courbevoie),
+  (Sebastian)-[:USER_LOCATION]->(juvisy),
+  (Anthony)-[:USER_LOCATION]->(stdiz),
+  (Don)-[:USER_LOCATION]->(juvisy),
+  (Bradley)-[:USER_LOCATION]->(stdiz),
+  (Terry)-[:USER_LOCATION]->(juvisy),
+  (David)-[:USER_LOCATION]->(stdiz),
+  
+  (Winston)-[:USER_LOCATION]->(courbevoie),
+  (Danai)-[:USER_LOCATION]->(courbevoie),
+  (Karen)-[:USER_LOCATION]->(courbevoie),
+  (TomHo)-[:USER_LOCATION]->(courbevoie),
+  (Zoe)-[:USER_LOCATION]->(stdiz),
+  (TomV)-[:USER_LOCATION]->(stdiz),
+  (Pom)-[:USER_LOCATION]->(stdiz),
+  (CarrieC)-[:USER_LOCATION]->(stdiz),
+  (Vin)-[:USER_LOCATION]->(aulnay),
+  (Peter)-[:USER_LOCATION]->(aulnay),
+  (Michael)-[:USER_LOCATION]->(juvisy),
+  (BenedictW)-[:USER_LOCATION]->(aulnay),
+  (Letitia)-[:USER_LOCATION]->(aulnay),
+  (TomHi)-[:USER_LOCATION]->(aulnay),
+  (Idris)-[:USER_LOCATION]->(aulnay),
+  (Ross)-[:USER_LOCATION]->(stdiz),
+  (Benicio)-[:USER_LOCATION]->(aulnay),
+  (Kerry)-[:USER_LOCATION]->(stdiz),
+  (Jacob)-[:USER_LOCATION]->(juvisy),
+  (Florence)-[:USER_LOCATION]->(stdiz),
+  (Isabella)-[:USER_LOCATION]->(juvisy),
+  (Samuel)-[:USER_LOCATION]->(stdiz),
+  (Cobie)-[:USER_LOCATION]->(juvisy),
+  (Lou)-[:USER_LOCATION]->(stdiz),
+  (Stan)-[:USER_LOCATION]->(juvisy),
+  
   (fitness)-[:GYM_LOCATION]->(juvisy),
   (montana)-[:GYM_LOCATION]->(stdiz),
+  (Neoness)-[:GYM_LOCATION]->(aulnay),
+  (gigafit)-[:GYM_LOCATION]->(paris),
+  (cercle)-[:GYM_LOCATION]->(paris),
+  (flash)-[:GYM_LOCATION]->(courbevoie),
+  (feel)-[:GYM_LOCATION]->(montrouge),
+  (Basic)-[:GYM_LOCATION]->(reims),
+  (alliance)-[:GYM_LOCATION]->(meudon),
+  (easy)-[:GYM_LOCATION]->(buc),
+  (lady)-[:GYM_LOCATION]->(versailles),
+  (moving)-[:GYM_LOCATION]->(stDenis),
+  (energie)-[:GYM_LOCATION]->(bondy),
+  (magic)-[:GYM_LOCATION]->(bobigny),
+  (cap)-[:GYM_LOCATION]->(drancy),
+  (orange)-[:GYM_LOCATION]->(cergy),
+  (gym)-[:GYM_LOCATION]->(marseilles),
+  
 
   (biceps)-[:EVENT_LOCATION]->(juvisy),
   (jambe)-[:EVENT_LOCATION]->(stdiz),
